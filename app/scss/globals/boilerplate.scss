@@ -1,0 +1,34 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-second);
+    background: var(--white);
+    color: var(--black);
+}
+  
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+.nav-item.active a{
+    color: var(--red);
+}

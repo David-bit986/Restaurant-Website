@@ -1,49 +1,63 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var pug         = require('gulp-pug');
-var reload      = browserSync.reload;
+// Initialize modules
+const { src, dest, watch, series } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const babel = require('gulp-babel');
+const terser = require('gulp-terser');
+const browsersync = require('browser-sync').create();
 
-/**
- * Compile pug files into HTML
- */
-gulp.task('templates', function() {
+// Use dart-sass for @use
+//sass.compiler = require('dart-sass');
 
-    var YOUR_LOCALS = {
-        "message": "This app is powered by gulp.pug recipe for BrowserSync"
-    };
+// Sass Task
+function scssTask() {
+  return src('app/scss/style.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('dist', { sourcemaps: '.' }));
+}
 
-    return gulp.src('./app/*.pug')
-        .pipe(pug({
-            locals: YOUR_LOCALS
-        }))
-        .pipe(gulp.dest('./dist/'));
-});
+// JavaScript Task
+function jsTask() {
+  return src('app/js/script.js', { sourcemaps: true })
+    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(terser())
+    .pipe(dest('dist', { sourcemaps: '.' }));
+}
 
-/**
- * Important!!
- * Separate task for the reaction to `.pug` files
- */
-gulp.task('pug-watch', ['templates'], reload);
+// Browsersync
+function browserSyncServe(cb) {
+  browsersync.init({
+    server: {
+      baseDir: '.',
+    },
+    notify: {
+      styles: {
+        top: 'auto',
+        bottom: '0',
+      },
+    },
+  });
+  cb();
+}
+function browserSyncReload(cb) {
+  browsersync.reload();
+  cb();
+}
 
-/**
- * Sass task for live injecting into all browsers
- */
-gulp.task('sass', function () {
-    return gulp.src('./app/scss/*.scss')
-        .pipe(sass()).on('error', sass.logError)
-        .pipe(gulp.dest('./dist/css'))
-        .pipe(reload({stream: true}));
-});
+// Watch Task
+function watchTask() {
+  watch('*.html', browserSyncReload);
+  watch(
+    ['app/scss/**/*.scss', 'app/**/*.js'],
+    series(scssTask, jsTask, browserSyncReload)
+  );
+}
 
-/**
- * Serve and watch the scss/pug files for changes
- */
-gulp.task('default', ['sass', 'templates'], function () {
+// Default Gulp Task
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
 
-    browserSync({server: './dist'});
-
-
-    gulp.watch('./app/scss/*.scss', ['sass']);
-    gulp.watch('./app/*.pug',       ['pug-watch']);
-});
+// Build Gulp Task
+exports.build = series(scssTask, jsTask);
