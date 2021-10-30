@@ -1,88 +1,99 @@
 @use '../util' as *;
 
 nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navbar{
     width: 100%;
     min-height: 8vh;
     padding: rem(20) rem(30);
     background-color: var(--black);
     @include flex(space-between);
+}
+.logo span{
+    color: var(--red)
+}
 
-    .logo span{
-        color: var(--red)
+.nav-links{
+    @include flex(space-between);
+    padding: 0;
+    &.container{
+        max-width: rem(600);
+        width: 100%;
+        margin: 0 auto;
     }
-
-    .nav-links{
-        @include flex(space-between);
-        padding: 0;
-        &.container{
-            max-width: rem(600);
-            width: 100%;
-            margin: 0 auto;
-        }
-    }
-
-    .nav-item a{
-        color: var(--white);
-        transition: color .5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        &:hover{
-            color: var(--red);
-        }
-    }
-
-    .burger{ 
-        display: none;
-        cursor: pointer;
-        & div{
-            transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-            width: 35px;
-            height: 3px;
-            background: var(--white);
-            border-radius: 100px;
-            &:nth-child(1){
-                transform: translateY(-10px);
-            }
-            &:nth-child(3){
-                transform: translateY(10px);
-            }
-        }
-        &:hover div{
-            &:nth-child(1){
-                transform: translateY(-6px);
-            }
-            &:nth-child(3){
-                transform: translateY(6px);
-            }
-        }
-    }
-    
-    @include breakpoint-down(medium){
-        nav{
-            justify-content: space-between;
-            background-color: rebeccapurple;
-        }
-        .burger{ 
-            display: block;
-        }
-        .nav-links{
-            height: 0;
-            overflow: hidden;
-            flex-direction: column;
-            position: absolute;
-            align-items: flex-start;
-            top: 10vh;
-            left: 0;
-            background-color: var(--black);
-            &.container{
-                max-width: 100%;
-                width: 100%;
-            }
-            & .nav-item{
-                padding: rem(30) ;
-            }
-        }
+}
+.nav-item a{
+    color: var(--white);
+    transition: color .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:hover{
+        color: var(--red);
     }
 }
 
+.burger{ 
+    display: none;
+    cursor: pointer;
+    & div{
+        transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 35px;
+        height: 3px;
+        background: var(--white);
+        border-radius: 100px;
+        &:nth-child(1){
+            transform: translateY(-10px);
+        }
+        &:nth-child(3){
+            transform: translateY(10px);
+        }
+    }
+    &:hover div{
+        &:nth-child(1){
+            transform: translateY(-6px);
+        }
+        &:nth-child(3){
+            transform: translateY(6px);
+        }
+    }
+}
+.rotate{
+    transform: rotateZ(90deg);
+}
+
+
+
+.links-toggle {
+    transition: all 0.3s linear;
+    background: #1c1919;
+    height: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nav-active{
+    height: 35vh;
+    padding-bottom: 2rem;
+    
+}
+
+main{
+    height: 300vh;
+}
+
+@include breakpoint-down(medium){
+    .burger{ 
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+}
 
 
 
