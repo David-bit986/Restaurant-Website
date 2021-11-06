@@ -13,5 +13,62 @@ ul{
 .logo{
     font-size: rem(24);
     font-family: var(--font-main);
-    color: rgb(255, 255, 255);
+    color: var(--white);
+}
+
+.main-title{
+    font-size: rem(140);
+    color: var(--white);
+    font-family: var(--font-main);
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.main-content p{
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: rem(22);
+    margin-bottom: 2em;
+
+}
+
+.front-heading{
+    margin: 0;
+    font-size: rem(50);
+    z-index: 2;
+}
+
+
+.sub-heading{
+    color: var(--red);
+    font-family: var(--font-main);
+    font-size: rem(40);
+    position: relative;
+    z-index: 1;
+    margin-bottom: rem(-25);
+}
+
+.center h3{
+    font-size: rem(22);
+    margin: 0;
+}
+
+.meals-h h4{
+    margin: 0;
+    font-size: rem(18);
+}
+
+.meals-f h4{
+    margin: 0;
+    color: var(--red);
+    font-size: rem(22);
+}
+
+.t-coment,.t-img,.t-name{
+    z-index: 2;
+    color: var(--white);
+}
+.testimonials .front-heading{
+    color: var(--white);
+    margin-bottom: rem(50);
 }

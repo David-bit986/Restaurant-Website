@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preload" as="image" href="dist/images/mainBg.jpg">
 </head>
 <body>
     <nav>
@@ -16,30 +18,397 @@
                 <li class="nav-item"><a href="">ABOUT</a></li>
                 <li class="nav-item"><a href="">MENU</a></li>
                 <li class="nav-item"><a href="">RESERVATION</a></li>
-                <li class="nav-item"><a href="">CONTACT</a></li>
             </ul>
+            <a href="#" class="contact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+                <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt" d="M34.973,25.439,27.1,22.064a1.687,1.687,0,0,0-1.969.485L21.641,26.81A26.062,26.062,0,0,1,9.183,14.351l4.261-3.488A1.683,1.683,0,0,0,13.929,8.9L10.554,1.02A1.7,1.7,0,0,0,8.62.043L1.308,1.73A1.688,1.688,0,0,0,0,3.375,32.621,32.621,0,0,0,32.625,36a1.687,1.687,0,0,0,1.645-1.308l1.687-7.313a1.708,1.708,0,0,0-.985-1.941Z" transform="translate(0 0)" fill="#fff"/>
+              </svg>
+            </a>
             <div class="burger" id="burger">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </div>
-            <ul class="links-toggle" id="nav-links">
-                <li class="nav-item active"><a href="">HOME</a></li>
-                <li class="nav-item"><a href="">ABOUT</a></li>
-                <li class="nav-item"><a href="">MENU</a></li>
-                <li class="nav-item"><a href="">RESERVATION</a></li>
-                <li class="nav-item"><a href="">CONTACT</a></li>
-            </ul>
+        <ul class="links-toggle" id="nav-links">
+            <li class="nav-item active"><a href="">HOME</a></li>
+            <li class="nav-item"><a href="">ABOUT</a></li>
+            <li class="nav-item"><a href="">MENU</a></li>
+            <li class="nav-item"><a href="">RESERVATION</a></li>
+            <li class="nav-item"><a href="">CONTACT</a></li>
+        </ul>
        
     </nav>
     <main>
         <div class="container main-content">
-            <h1 class="main-title">Treat Yourself</h1>
-            <p>You don't need a silver fork to eat good food.</p>
-            <a href="#" class="explore-btn">EXPLORE NOW</a>
+            <h1 class="animate__animated animate__fadeInDown main-title">Treat Yourself</h1>
+            <p class="animate__animated animate__fadeInDown">You don't need a silver fork to eat <span>good food</span></p>
+            <a href="#" class="animate__animated animate__fadeInDown explore-btn">EXPLORE NOW</a>
         </div>
     </main>
+    <article class="page-menu page-pd">
+        <section class="container">
+            <section class="sec-t">
+                <span class="sub-heading">Specialties</span>
+                <h1 class='front-heading'>Our Menu</h1>
+            </section>
+            <section class="sec-c">
+                <div class='heading-menu'>
+                    <div class='center'>
+                        <h3>BREAKFAST</h3>
+                    </div>
+                    <div class="meals">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals center-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals last-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu-svg'>
+                       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 192 192"><path d="M775 1773 c-33 -8 -73 -21 -88 -29 -16 -8 -34 -14 -40 -14 -12 0 -78 -33 -122 -61 -16 -10 -40 -23 -53 -29 -36 -16 -186 -170 -224 -230 -31 -51 -45 -77 -91 -183 -9 -21 -17 -48 -17 -61 0 -13 -7 -43 -15 -66 -17 -49 -20 -210 -4 -280 6 -25 14 -63 19 -85 14 -67 62 -176 96 -222 13 -17 24 -37 24 -43 0 -17 196 -210 213 -210 8 0 19 -6 25 -13 19 -22 201 -107 231 -107 10 0 35 -7 54 -15 51 -21 247 -20 335 1 342 84 572 314 656 656 20 84 21 248 1 314 -8 27 -15 61 -15 75 0 14 -7 34 -15 45 -8 10 -15 26 -15 35 0 20 -46 110 -92 180 -43 63 -154 174 -213 211 -68 43 -157 88 -174 88 -9 0 -25 7 -35 15 -11 8 -31 15 -45 15 -14 0 -48 7 -75 15 -63 19 -240 18 -321 -2z m190 -148 c29 -29 45 -53 45 -69 0 -34 16 -41 46 -21 19 12 49 16 125 16 56 0 106 -4 113 -9 6 -5 24 -12 39 -16 91 -22 232 -164 251 -254 4 -17 12 -34 17 -37 5 -4 9 -54 9 -113 0 -89 -4 -115 -20 -147 l-21 -40 28 -23 c69 -55 73 -63 73 -127 -1 -86 -35 -139 -185 -290 -146 -148 -304 -245 -501 -308 -117 -38 -186 -15 -272 93 -24 30 -60 75 -80 99 -21 24 -41 50 -46 59 -11 18 -13 21 -56 72 -16 19 -30 38 -30 42 0 24 -36 38 -94 38 -59 0 -66 2 -107 39 -44 38 -44 39 -44 107 0 82 14 106 92 156 29 18 53 37 53 41 0 4 -11 25 -25 45 -19 28 -25 49 -25 92 0 31 -6 64 -13 75 -72 105 29 262 161 253 l46 -3 9 44 c11 54 55 102 110 120 20 7 37 16 37 20 0 5 10 19 23 32 43 47 69 58 135 58 61 1 64 0 107 -44z" transform="matrix(.1 0 0 -.1 0 192)"/><path d="M803 1589 c-18 -12 -33 -25 -33 -31 0 -5 -9 -23 -21 -39 -15 -22 -28 -29 -53 -29 -51 0 -78 -35 -74 -96 l3 -49 45 -3 c25 -2 52 -10 62 -18 23 -22 62 -14 66 12 3 24 83 111 125 137 40 25 37 66 -8 106 -42 36 -68 39 -112 10z" transform="matrix(.1 0 0 -.1 0 192)"/><path d="M1115 1479 c-22 -6 -52 -12 -67 -16 -15 -3 -33 -11 -39 -19 -6 -8 -17 -14 -25 -14 -19 0 -116 -101 -135 -141 -9 -19 -24 -52 -34 -74 l-17 -39 46 -41 c25 -22 53 -57 61 -77 15 -36 11 -93 -6 -104 -16 -10 -9 -55 12 -82 11 -15 49 -58 84 -97 34 -38 82 -94 105 -123 41 -53 42 -53 63 -35 69 58 146 137 194 196 30 38 69 77 87 87 48 29 63 47 81 103 29 85 21 206 -16 267 -5 8 -14 25 -19 38 -14 32 -100 114 -141 133 -82 39 -171 53 -234 38z m215 -124 c7 -8 16 -15 21 -15 5 0 18 -9 29 -20 11 -11 20 -24 20 -29 0 -5 7 -14 15 -21 22 -18 20 -132 -2 -168 -23 -34 -41 -52 -76 -75 -23 -15 -27 -24 -27 -63 0 -59 -30 -106 -92 -146 -43 -28 -134 -24 -181 7 -56 38 -87 94 -87 155 0 72 27 120 93 163 23 15 27 24 27 63 0 57 28 104 90 146 33 23 152 25 170 3z" transform="matrix(.1 0 0 -.1 0 192)"/><path d="M1201 1292 c-19 -10 -44 -36 -55 -57 -16 -32 -17 -42 -7 -70 15 -42 5 -65 -31 -72 -16 -3 -42 -19 -59 -35 -51 -52 -51 -104 1 -156 41 -41 81 -49 127 -25 51 27 78 81 64 126 -16 46 -7 62 44 81 70 27 99 89 70 150 -31 64 -97 89 -154 58z" transform="matrix(.1 0 0 -.1 0 192)"/><path d="M445 1315 c-39 -17 -69 -68 -60 -102 3 -14 17 -40 31 -58 25 -34 31 -60 14 -70 -24 -15 2 -105 30 -105 8 0 33 17 55 37 22 19 51 43 65 52 28 17 34 22 69 51 13 11 39 25 57 32 30 11 34 16 34 48 0 29 -6 41 -31 59 -26 19 -38 22 -79 16 -40 -5 -51 -3 -66 13 -23 23 -58 42 -76 41 -7 0 -26 -7 -43 -14z" transform="matrix(.1 0 0 -.1 0 192)"/><path d="M559 964 c-234 -173 -239 -178 -239 -224 0 -60 77 -112 113 -76 30 30 59 19 100 -37 20 -28 51 -68 68 -86 16 -19 50 -66 75 -103 25 -37 49 -68 52 -68 12 0 27 14 44 40 16 26 48 44 128 75 25 9 58 23 73 31 16 8 34 14 41 14 8 0 25 9 39 21 l27 20 -98 113 c-164 191 -182 214 -182 231 0 10 11 30 25 47 14 16 25 36 25 44 0 40 -49 93 -86 94 -12 0 -102 -60 -205 -136z m66 -164 c0 -33 -2 -35 -35 -35 -29 0 -36 4 -38 23 -6 40 5 54 40 50 30 -3 33 -6 33 -38z m180 -30 c0 -33 -2 -35 -35 -35 -29 0 -36 4 -38 23 -6 40 5 54 40 50 30 -3 33 -6 33 -38z m-60 -150 c0 -33 -2 -35 -35 -35 -29 0 -36 4 -38 23 -6 40 5 54 40 50 30 -3 33 -6 33 -38z m153 -51 c4 -33 -20 -53 -53 -45 -19 5 -25 13 -25 35 0 36 8 43 45 39 24 -2 31 -8 33 -29z" transform="matrix(.1 0 0 -.1 0 192)"/><path d="M1450 809 c-177 -200 -258 -267 -415 -342 -44 -21 -88 -43 -97 -48 -10 -5 -26 -9 -36 -9 -11 0 -38 -14 -60 -30 -37 -26 -42 -35 -42 -69 0 -34 5 -42 35 -61 44 -27 69 -24 198 28 l39 16 -4 54 c-2 42 1 57 13 65 29 18 49 1 49 -42 0 -45 17 -63 35 -38 7 10 17 17 22 17 6 0 23 10 37 21 25 19 27 27 24 72 -2 37 1 52 13 60 26 16 49 1 49 -33 0 -34 17 -39 41 -12 9 9 30 30 48 46 31 27 33 31 29 82 -3 37 -1 58 8 65 18 15 54 1 54 -21 0 -38 17 -27 63 42 60 88 66 116 36 157 -18 24 -30 31 -58 31 -30 0 -42 -8 -81 -51z" transform="matrix(.1 0 0 -.1 0 192)"/></svg>
+                    </div>
+                </div>
+                <div class='heading-menu'>
+                    <div class='center'>
+                        <h3>LUNCH</h3>
+                    </div>
+                    <div class="meals">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals center-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals last-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu-svg'>
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M380 560 c-27 -27 -25 -56 6 -86 42 -43 104 -15 104 46 0 55 -70 80 -110 40z m77 -26 c8 -20 -8 -48 -30 -52 -22 -5 -42 35 -26 54 16 19 48 18 56 -2z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M272 410 c-74 -34 -202 -173 -180 -196 7 -6 442 -125 468 -128 22 -2 15 110 -10 178 -54 143 -160 199 -278 146z m183 -50 c19 -18 43 -52 53 -74 21 -43 47 -154 39 -162 -3 -3 -90 18 -193 46 -235 63 -224 60 -224 69 0 19 87 105 134 132 43 25 59 29 104 26 43 -3 59 -10 87 -37z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M293 353 c-34 -17 -48 -52 -15 -38 9 4 33 13 52 20 19 7 36 18 38 24 5 16 -38 12 -75 -6z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M202 288 c-16 -16 -15 -38 2 -38 17 0 30 30 18 42 -4 4 -13 3 -20 -4z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M14 31 c-17 -18 33 -21 307 -21 209 0 310 3 307 10 -3 10 -604 20 -614 11z" transform="matrix(.1 0 0 -.1 0 64)"/></svg>                    
+                    </div>
+                </div>
+                <div class='heading-menu'>
+                    <div class='center'>
+                        <h3>DINNER</h3>
+                    </div>
+                    <div class="meals">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals center-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals last-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu-svg'>
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M380 560 c-27 -27 -25 -56 6 -86 42 -43 104 -15 104 46 0 55 -70 80 -110 40z m77 -26 c8 -20 -8 -48 -30 -52 -22 -5 -42 35 -26 54 16 19 48 18 56 -2z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M272 410 c-74 -34 -202 -173 -180 -196 7 -6 442 -125 468 -128 22 -2 15 110 -10 178 -54 143 -160 199 -278 146z m183 -50 c19 -18 43 -52 53 -74 21 -43 47 -154 39 -162 -3 -3 -90 18 -193 46 -235 63 -224 60 -224 69 0 19 87 105 134 132 43 25 59 29 104 26 43 -3 59 -10 87 -37z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M293 353 c-34 -17 -48 -52 -15 -38 9 4 33 13 52 20 19 7 36 18 38 24 5 16 -38 12 -75 -6z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M202 288 c-16 -16 -15 -38 2 -38 17 0 30 30 18 42 -4 4 -13 3 -20 -4z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M14 31 c-17 -18 33 -21 307 -21 209 0 310 3 307 10 -3 10 -604 20 -614 11z" transform="matrix(.1 0 0 -.1 0 64)"/></svg>                    
+                    </div>
+                </div>
+                <div class='heading-menu'>
+                    <div class='center'>
+                        <h3>DESSERTS</h3>
+                    </div>
+                    <div class="meals">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals center-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals last-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu-svg'>
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M380 560 c-27 -27 -25 -56 6 -86 42 -43 104 -15 104 46 0 55 -70 80 -110 40z m77 -26 c8 -20 -8 -48 -30 -52 -22 -5 -42 35 -26 54 16 19 48 18 56 -2z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M272 410 c-74 -34 -202 -173 -180 -196 7 -6 442 -125 468 -128 22 -2 15 110 -10 178 -54 143 -160 199 -278 146z m183 -50 c19 -18 43 -52 53 -74 21 -43 47 -154 39 -162 -3 -3 -90 18 -193 46 -235 63 -224 60 -224 69 0 19 87 105 134 132 43 25 59 29 104 26 43 -3 59 -10 87 -37z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M293 353 c-34 -17 -48 -52 -15 -38 9 4 33 13 52 20 19 7 36 18 38 24 5 16 -38 12 -75 -6z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M202 288 c-16 -16 -15 -38 2 -38 17 0 30 30 18 42 -4 4 -13 3 -20 -4z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M14 31 c-17 -18 33 -21 307 -21 209 0 310 3 307 10 -3 10 -604 20 -614 11z" transform="matrix(.1 0 0 -.1 0 64)"/></svg>                    
+                    </div>
+                </div>
+                <div class='heading-menu'>
+                    <div class='center'>
+                        <h3>WINE CARD </h3>
+                    </div>
+                    <div class="meals">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals center-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals last-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu-svg'>
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M380 560 c-27 -27 -25 -56 6 -86 42 -43 104 -15 104 46 0 55 -70 80 -110 40z m77 -26 c8 -20 -8 -48 -30 -52 -22 -5 -42 35 -26 54 16 19 48 18 56 -2z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M272 410 c-74 -34 -202 -173 -180 -196 7 -6 442 -125 468 -128 22 -2 15 110 -10 178 -54 143 -160 199 -278 146z m183 -50 c19 -18 43 -52 53 -74 21 -43 47 -154 39 -162 -3 -3 -90 18 -193 46 -235 63 -224 60 -224 69 0 19 87 105 134 132 43 25 59 29 104 26 43 -3 59 -10 87 -37z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M293 353 c-34 -17 -48 -52 -15 -38 9 4 33 13 52 20 19 7 36 18 38 24 5 16 -38 12 -75 -6z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M202 288 c-16 -16 -15 -38 2 -38 17 0 30 30 18 42 -4 4 -13 3 -20 -4z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M14 31 c-17 -18 33 -21 307 -21 209 0 310 3 307 10 -3 10 -604 20 -614 11z" transform="matrix(.1 0 0 -.1 0 64)"/></svg>                    
+                    </div>
+                </div>
+                <div class='heading-menu'>
+                    <div class='center'>
+                        <h3>DRINKS & TEA</h3>
+                    </div>
+                    <div class="meals">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals center-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meals last-meal">
+                        <div class="meals-img"><img src="dist/images/food-1.webp" alt=""></div>
+                        <div class="meals-txt">
+                            <div class="meals-flex">
+                                <div class="meals-h">
+                                    <h4>Camile Thai Kitchen</h4>
+                                </div>
+                                <div class="meals-f">
+                                    <h4>$29</h4>
+                                </div>
+                            </div>
+                            <div class="meals-in">
+                                <p>carrot, baby leaves, fresh chilli, Teriyaki sauce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='menu-svg'>
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M380 560 c-27 -27 -25 -56 6 -86 42 -43 104 -15 104 46 0 55 -70 80 -110 40z m77 -26 c8 -20 -8 -48 -30 -52 -22 -5 -42 35 -26 54 16 19 48 18 56 -2z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M272 410 c-74 -34 -202 -173 -180 -196 7 -6 442 -125 468 -128 22 -2 15 110 -10 178 -54 143 -160 199 -278 146z m183 -50 c19 -18 43 -52 53 -74 21 -43 47 -154 39 -162 -3 -3 -90 18 -193 46 -235 63 -224 60 -224 69 0 19 87 105 134 132 43 25 59 29 104 26 43 -3 59 -10 87 -37z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M293 353 c-34 -17 -48 -52 -15 -38 9 4 33 13 52 20 19 7 36 18 38 24 5 16 -38 12 -75 -6z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M202 288 c-16 -16 -15 -38 2 -38 17 0 30 30 18 42 -4 4 -13 3 -20 -4z" transform="matrix(.1 0 0 -.1 0 64)"/><path d="M14 31 c-17 -18 33 -21 307 -21 209 0 310 3 307 10 -3 10 -604 20 -614 11z" transform="matrix(.1 0 0 -.1 0 64)"/></svg>                    
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+    <article class="testimonials page-pd">
+        <div class="sec-t">
+            <span class="sub-heading">Testimony</span>
+            <h1 class='front-heading'>Happy Customers</h1>
+        </div>
+        <section class="t-persons">
+            <div>
+                <p class="t-coment">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+                <div class="t-img">
+                    <img src="dist/images/Ellipse 21.jpg" alt="">
+                    <span><p>"</p></span>
+                </div>
+                <h3 class="t-name">name</h3>
+            </div>
+        </section>
+
+    </article>
 
 
     <script src="dist/script.js"></script>

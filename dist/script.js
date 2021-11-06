@@ -1,2 +1,2 @@
-"use strict";var burger=document.getElementById("burger"),nav=document.getElementById("nav-links");burger.addEventListener("click",(function(){nav.classList.contains("links-toggle")&&(nav.classList.toggle("nav-active"),burger.classList.toggle("rotate"))}));
+"use strict";var burger=document.getElementById("burger"),nav=document.getElementById("nav-links"),meals=document.querySelector(".dsadas");burger.addEventListener("click",(function(){nav.classList.contains("links-toggle")&&(nav.classList.toggle("nav-active"),burger.classList.toggle("rotate"))}));
 //# sourceMappingURL=script.js.map

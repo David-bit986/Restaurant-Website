@@ -1,9 +1,10 @@
 @use '../util' as *;
 
 nav{
-    position: fixed;
+    position:fixed;
     width: 100%;
     top: 0;
+    z-index: 10;
 }
 
 .navbar{
@@ -34,9 +35,21 @@ nav{
     }
 }
 
+.contact{
+    background: var(--red);
+    border-radius: 100%;
+    padding: rem(8) rem(14) rem(5) rem(14);
+    svg{width: rem(25)}
+    &:hover{
+        background: var(--white);
+        svg{path{fill:red}}
+    }
+}
+
 .burger{ 
     display: none;
     cursor: pointer;
+    padding: 10px 0 10px 10px;
     & div{
         transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
         width: 35px;
@@ -76,21 +89,24 @@ nav{
     flex-direction: column;
     justify-content: space-between;
 }
-.nav-active{
-    height: 35vh;
-    padding-bottom: 2rem;
-    
-}
 
-main{
-    height: 300vh;
-}
+
+
 
 @include breakpoint-down(medium){
     .burger{ 
         display: block;
     }
     .nav-links{
+        display: none;
+    }
+
+    .nav-active{
+        height: 35vh;
+        padding-bottom: 2rem;
+        
+    }
+    .contact{
         display: none;
     }
 }
