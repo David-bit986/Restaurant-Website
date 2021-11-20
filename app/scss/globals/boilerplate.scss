@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -21,14 +23,38 @@ body {
   
 .visually-hidden {
     position: absolute;
-    left: -10000px;
+    left: rem(-10000);
     top: auto;
-    width: 1px;
-    height: 1px;
+    width: rem(1);
+    height: rem(1);
     overflow: hidden;
 }
 
 
 .nav-item.active a{
     color: var(--red);
+}
+
+.arrow {
+    border: solid var(--white);
+    border-width: 0 rem(3) rem(3) 0;
+    display: inline-block;
+    padding: rem(3);
+    margin: 0 rem(5); 
+    transition: all 0.3s linear;
+    cursor: pointer;
+
+    &:hover{
+        border-color: var(--red);
+    }
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+  
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }

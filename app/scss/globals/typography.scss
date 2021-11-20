@@ -33,6 +33,7 @@ ul{
 }
 
 .front-heading{
+    text-align: center;
     margin: 0;
     font-size: rem(50);
     z-index: 2;
@@ -70,5 +71,12 @@ ul{
 }
 .testimonials .front-heading{
     color: var(--white);
-    margin-bottom: rem(50);
+    margin-bottom: rem(40);
+}
+
+.r-title{
+    text-align: center;
+    color: var(--white);
+    font-size: rem(50);
+    margin: 0 0 rem(30) 0;
 }

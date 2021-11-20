@@ -1,0 +1,27 @@
+@use '../util' as *;
+
+.reservation{
+    min-height: 40vh;
+    background: var(--red);
+    @include flex(center);
+    padding: rem(40) 0;
+}
+
+.main-r{
+    @include flex(center);
+
+    .sec-r{
+        @include flex(center);
+        flex-direction: column;
+
+        .explore-btn{
+            background-color: rgba(0, 0, 0, 0);
+            color: var(--white);
+            border: rem(5) white solid;
+            &:hover{
+                background-color: rgb(255, 255, 255);
+                color: var(--red);
+            }
+        }
+    }
+}

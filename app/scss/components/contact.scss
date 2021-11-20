@@ -1,0 +1,99 @@
+@use '../util' as *;
+
+.contact-p{
+    min-height: 50vh;
+    background-color: var(--black);
+    color:white;
+    padding-top: rem(50)
+}
+
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .a-row{
+        max-width:rem(400);
+        width:90%;
+        margin: 0 rem(20) rem(40) 0;
+
+        p{
+            color: var(--dark-white);
+            margin: rem(30) 0 rem(50) 0 
+        }
+
+        .row-ul{
+            display:flex;
+            padding:0;
+            .l-svg {
+                background:var(--red);
+                margin-right: rem(15);
+                padding: rem(8) rem(9) rem(7) rem(9);
+                border-radius: rem(100); 
+                transition: all 0.3s linear;
+
+                & svg{
+                    width:rem(24);
+                    height:rem(24);
+                    fill:var(--white);
+                    
+                }
+                &:hover{
+                    background:var(--white);
+                }
+                &:hover .p-svg{
+                    fill:var(--red);
+                }
+            }
+        }
+    }
+
+    .o-row{
+        max-width:rem(300);
+        width:90%;
+        margin: 0 rem(20) rem(40) rem(40);
+        .row-ul{
+            padding: 0;
+            margin-top: rem(30);
+
+            li{
+                display: flex;
+                justify-content: space-between;
+                padding: rem(8) 0;
+
+                .span2{
+                    color: var(--dark-white);
+                }
+            }
+        }
+    }
+
+    .c-row{
+        .row-ul{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin-top: rem(30);
+            a{
+                color: var(--dark-white);
+                margin-bottom: rem(15);
+                &:hover{
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-down(medium0) {
+    // .row{
+        // display:flex;
+        // flex-wrap: nowrap;
+        // flex-direction: column;
+    // }
+    .row .o-row{
+        margin: rem(50) rem(20) rem(40) rem(0);
+    }
+    .row .c-row{
+        margin: rem(50) rem(0) rem(40) rem(0);
+    }
+}

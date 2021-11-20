@@ -60,6 +60,32 @@
 }
 
 .t-persons{
-    display: flex;
+    @include flex(center);
+    position: relative;
     flex-direction: row;
+    z-index: 2;
+}
+
+.t-test{
+    @include flex(center);
+    flex-direction: column;
+}
+
+.p-list {
+    & button{
+        background: rgba(255, 255, 255, 0.2);
+        width: 15px;
+        height: 15px;
+        border-radius: 100px;
+        border: 1px solid #4d4d4d;
+    }
+
+    & .active{
+        background: var(--red);
+    }
+}
+
+
+.t-arrow{
+    margin-top: rem(20);
 }
