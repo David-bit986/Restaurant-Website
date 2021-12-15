@@ -18,7 +18,7 @@
 
         p{
             color: var(--dark-white);
-            margin: rem(30) 0 rem(50) 0 
+            margin: rem(30) 0 rem(50) 0
         }
 
         .row-ul{
@@ -95,5 +95,110 @@
     }
     .row .c-row{
         margin: rem(50) rem(0) rem(40) rem(0);
+    }
+}
+
+
+
+// about
+.choise{
+    min-height: 75vh;
+    .about-t{
+        justify-content:flex-start;
+        align-items: flex-start;
+
+        .front-heading{
+            text-align:left;
+        }
+    }
+
+    .sec-c .heading-menu{
+        padding: rem(20);
+        &:hover{
+            transition-delay: 0;
+            transform: translateY(rem(-10));
+        }
+        .number{
+            font-weight: bold;
+            color:var(--red);
+            margin: 0;
+        }
+
+        h3{
+            margin: rem(10) 0 rem(30) 0;
+        }
+    }
+}
+
+.chefs{
+    min-height: 80vh;
+    background-color: #F5F5F5;
+    margin-bottom: rem(250);
+    padding-bottom: 0;
+
+    & .chefs__cont{
+        @include flex(center);
+        flex-wrap: wrap;
+        gap: rem(50);
+        transform: translateY(rem(100));
+
+
+        .person{
+            position:relative;
+            height: 50vh;
+            @include flex(flex-end);
+            flex-direction: column;
+            z-index: 1;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                background: #000;
+                background: linear-gradient(
+                0deg,black 0%,rgba(0,0,0,0) 100%);
+            }
+
+
+            .row-ul{
+                padding:rem(10) rem(0) rem(50) rem(0);
+                @include flex(space-between);
+                gap: rem(10);
+                
+                .l-svg{
+                    background: var(--red);
+                    padding: rem(8) rem(9) rem(7) rem(9);
+                    border-radius:100px;
+                    transition: all 0.3s linear;
+                    
+                    &:hover{
+                        background:var(--white);
+                    }
+                    &:hover .p-svg{
+                        fill:var(--red);
+                    }
+                }
+            }
+
+        }
+
+
+        .person1{
+            background: var(--red) url('images/chef1.webp') no-repeat center;
+            width:360px;
+        }
+        .person2{
+            background: var(--red) url('images/chef2.webp') no-repeat center;
+            width: 360px;
+        }
+        .person3{
+            background: var(--red) url('images/chef3.webp') no-repeat center;
+            background-size: cover;
+            width: 360px;
+        }
     }
 }

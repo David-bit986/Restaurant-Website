@@ -10,22 +10,22 @@ const allCircle = document.querySelectorAll('button.p-circle')
 var i = 0
 var images = [
     {
-        'img': 'dist/images/Ellipse 21.jpg',
+        'img': 'dist/images/pers1.webp',
         'name': 'Ruby',
         'recomandation':'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts',
     },
     {
-        'img': 'dist/images/Ellipse 33.jpg',
+        'img': 'dist/images/pers2.webp',
         'name': 'David',
         'recomandation':'Far far away, behind the word mountains, far from td Consonantia, there live the blind texts',
     },
     {
-        'img': 'dist/images/Ellipse 34.jpg',
+        'img': 'dist/images/pers3.webp',
         'name': 'Herbert',
         'recomandation':'Far far away, behind the word mountains, far from the countri live the blind texts',
     },
     {
-        'img': 'dist/images/Ellipse 35.jpg',
+        'img': 'dist/images/pers4.webp',
         'name': 'Alvin',
         'recomandation':'Far rom the countries Vokalia and Consonantia, there live the blind texts',
     }

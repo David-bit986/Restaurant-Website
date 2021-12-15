@@ -6,7 +6,7 @@ main{
     width: 100%;
     min-height: 100vh;
     @include flex(center);
-    background-image: url("images/mainBg.jpg");
+    background-image: url("images/mainBg.webp");
     background-color: var(--black);
     background-size: cover;
     background-repeat: no-repeat;
