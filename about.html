@@ -19,8 +19,8 @@
             <ul class="container nav-links">
                 <li class="nav-item"><a href="index.html">HOME</a></li>
                 <li class="nav-item active"><a href="about.html">ABOUT</a></li>
-                <li class="nav-item"><a href="">MENU</a></li>
-                <li class="nav-item"><a href="">RESERVATION</a></li>
+                <li class="nav-item"><a href="menu.html">MENU</a></li>
+                <li class="nav-item"><a href="resevation.html">RESERVATION</a></li>
             </ul>
             <a href="#" class="contact">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
@@ -47,11 +47,11 @@
         <div data-aos="fade-up" class="container main-content">
             <h1 class="main-title">About Us</h1>
             <p class="">our restaurant</span></p>
-            <a href="#" class="explore-btn">EXPLORE NOW</a>
+            <a href="#choise" class="explore-btn">EXPLORE NOW</a>
         </div>
     </main>
 
-    <article class="choise page-pd">
+    <article id="choise" class="choise page-pd">
         <section class="container">
             <div data-aos="fade-up" class="sec-t about-t">
                 <span class="sub-heading">CHOOSE US</span>
@@ -215,7 +215,7 @@
             delay: 10, // values from 0 to 3000, with step 50ms
             duration: 400, // values from 0 to 3000, with step 50ms
             easing: 'ease', // default easing for AOS animations
-            once: false, // whether animation should happen only once - while scrolling down
+            once: true, // whether animation should happen only once - while scrolling down
             mirror: false, // whether elements should animate out while scrolling past them
             anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
         });

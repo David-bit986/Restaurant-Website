@@ -85,11 +85,6 @@
 }
 
 @include breakpoint-down(medium0) {
-    // .row{
-        // display:flex;
-        // flex-wrap: nowrap;
-        // flex-direction: column;
-    // }
     .row .o-row{
         margin: rem(50) rem(20) rem(40) rem(0);
     }
@@ -201,4 +196,46 @@
             width: 360px;
         }
     }
+}
+
+.t-form{
+    min-height: 80vh;
+    background-color: var(--red);
+
+    form{
+        .title{text-align: center;}
+
+        .placeholders{
+            @include flex(center);
+            flex-wrap: wrap;
+            gap: rem(50);
+            div{ 
+                width: rem(300);
+                height: rem(50);
+
+            }
+        }
+        .form-control{
+            width: 100%;
+            height: 100%;
+            padding-left: rem(10);
+            background: transparent;
+            border: rem(1) solid var(--white-border);
+            color: var(--white) ;
+            border-radius: rem(2);
+        }
+
+        .f-btn{
+            padding: 0;
+            cursor: pointer;
+            background: var(--white);
+            color: var(--black); 
+            transition: all 0.3s linear;
+            
+            &:hover{
+                color: var(--red);
+            }
+        }
+    }
+        
 }

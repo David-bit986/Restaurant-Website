@@ -92,3 +92,28 @@ ul{
         margin: 0 0 rem(50) 0;
     }
 }
+
+.t-form{
+    .title{
+        color: var(--white);
+        font-size: rem(50);
+        
+        h1{
+            margin: 0 0 rem(100) 0;
+        }
+    }
+    form{
+        .f-btn{
+            font-size: rem(18);
+        }
+    }
+}
+
+::placeholder {
+    color: var(--dark-white);
+    opacity: 1; /* Firefox */
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

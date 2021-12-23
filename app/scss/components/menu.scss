@@ -22,6 +22,7 @@
         border: 1.5px dashed var(--white-border);
         padding: 3em 1.5em .5em 1.5em;
         transition: all 0.3s linear;
+        height: fit-content;
         &:hover{
             border: 1.5px dashed var(--red)
         }
@@ -99,6 +100,10 @@
     }
 }
 
+
+.full-menu{
+    min-height: 100vh;
+}
 
 
 @include breakpoint-down(medium) {
