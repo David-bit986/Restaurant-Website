@@ -109,9 +109,18 @@ ul{
     }
 }
 
-::placeholder {
+.t-form{
+    ::placeholder {
     color: var(--dark-white);
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    }
+}
+    
+.contact-form{
+    ::placeholder {
+        color: var(--black);
+        opacity: 1;
+        }
 }
 
 textarea:focus, input:focus{

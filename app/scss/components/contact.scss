@@ -198,44 +198,104 @@
     }
 }
 
-.t-form{
-    min-height: 80vh;
-    background-color: var(--red);
 
-    form{
-        .title{text-align: center;}
 
-        .placeholders{
-            @include flex(center);
-            flex-wrap: wrap;
-            gap: rem(50);
-            div{ 
-                width: rem(300);
-                height: rem(50);
+// Contact page
+.contact-f{
+    min-height: 90vh;
+    @include flex(center);
+    .container{
+        @include flex(space-between);
+    }
+    .contact-info{
 
+        .info-c{
+            i{ 
+                background-color: var(--red);
+                padding: rem(10) rem(12) rem(10) rem(12);
+                border-radius: 100%;
+                svg{
+                    width: rem(30);
+                    fill: var(--white);
+                }
+                margin-right: rem(15);
             }
+            .text-c{
+                p{
+                    margin: 0 0 rem(5) 0;
+                    &:last-child{
+                        margin: 0;
+                    }
+                }
+            }
+            @include flex(normal);
+            margin-bottom: rem(40);
         }
-        .form-control{
-            width: 100%;
-            height: 100%;
-            padding-left: rem(10);
-            background: transparent;
-            border: rem(1) solid var(--white-border);
-            color: var(--white) ;
-            border-radius: rem(2);
-        }
+    }
+    .contact-form{
+        width: 650px;
+        form{
+            @include flex(normal);
+            flex-direction:column;
+            align-items: normal;
+            gap:rem(20);
 
-        .f-btn{
-            padding: 0;
-            cursor: pointer;
-            background: var(--white);
-            color: var(--black); 
-            transition: all 0.3s linear;
-            
-            &:hover{
-                color: var(--red);
+            .fr1{
+                @include flex(normal);
+                align-items: normal;
+                gap:rem(20);
+                input{
+                    width: 100%;
+                }
+            }
+
+            #fname{
+                height: rem(50);
+            }
+
+            #tname{
+                max-width: rem(200);
+                cursor: pointer;
+                background: var(--red);
+                border: 3px solid var(--red);
+                border-radius: 10px;
+                color: var(--white);
+                font-size: rem(18);
+                padding: rem(15) 0;
+                transition: all 0.3s linear;
+                &:hover{
+                    background: var(--light-red);
+                    border: 3px solid var(--light-red);
+                    color: var(--white);
+                }
+            }
+            .form-control{
+                padding-left: rem(10);
+                border: rem(1) solid var(--black);
+                border-radius: rem(2);
+                color: var(--black);
             }
         }
     }
-        
+}
+
+@include breakpoint-down(medium) {
+    .contact-f{
+        .container{
+            flex-direction:column-reverse;
+            align-items: flex-start;
+        }
+        .contact-form{
+            width: 100%;
+            margin-bottom: rem(100);
+        }
+        .contact-info{
+            @include flex(space-between);
+            flex-wrap: wrap;
+            
+            .info-c{
+                margin: rem(30) rem(40) rem(30) 0;
+            }
+        }
+    }
 }

@@ -10,9 +10,10 @@ nav{
 .navbar{
     width: 100%;
     min-height: 8vh;
-    padding: rem(20) rem(30);
+    padding: rem(10) rem(30);
     background-color: var(--black);
     @include flex(space-between);
+    box-shadow: rgba(0, 0, 0, 0.1) rem(0) rem(10) rem(15) rem(-3), rgba(0, 0, 0, 0.05) rem(0) rem(4) rem(6) rem(-2);
 }
 .logo span{
     color: var(--red)
@@ -38,12 +39,18 @@ nav{
 .contact{
     background: var(--red);
     border-radius: 100%;
-    padding: rem(8) rem(14) rem(5) rem(14);
+    padding: rem(3) rem(11) rem(2) rem(11);
     svg{width: rem(25)}
     &:hover{
         background: var(--white);
         svg{path{fill:red}}
     }
+}
+
+.btn-active{
+    background: var(--white);
+    svg{path{fill:red}}
+
 }
 
 .burger{ 
